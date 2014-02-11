@@ -1,0 +1,44 @@
+body {
+	background: #f5f5f5;
+	font: normal 100% Georgia;
+}
+
+img[src$=".gif"], img[src$=".png"] {
+  image-rendering: -moz-crisp-edges;         /* Firefox */
+  image-rendering:   -o-crisp-edges;         /* Opera */
+  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+}
+
+#main {
+	background: #fff;
+ 	margin: 0 auto;
+	max-width: 960px;
+	width: 90%:;
+}
+
+header {
+	width: 100%;
+}
+
+.logo {
+	display: block;
+	margin: -20px auto;
+	max-width: 927px;
+	width: 100%;
+}
+
+.container {
+	max-width: 960px;
+	width: 90%;
+}
+
+.column {
+	float: left;
+	margin-left: 2.083333333333333%;
+}
+
+.row {
+	clear: both;
+}
