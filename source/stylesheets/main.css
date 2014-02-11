@@ -3,6 +3,10 @@ body {
 	font: normal 100% Georgia;
 }
 
+*, *:before, *:after {
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
 img[src$=".gif"], img[src$=".png"] {
   image-rendering: -moz-crisp-edges;         /* Firefox */
   image-rendering:   -o-crisp-edges;         /* Opera */
@@ -15,11 +19,22 @@ img[src$=".gif"], img[src$=".png"] {
 	background: #fff;
  	margin: 0 auto;
 	max-width: 960px;
+	overflow: hidden;
 	width: 90%:;
 }
 
 header {
 	width: 100%;
+}
+
+nav ul {
+	list-style: none;
+	margin: 60px 0 0 30px;
+}
+
+nav ul li {
+	display: inline-block;
+	margin-right: 20px;
 }
 
 .logo {
@@ -41,4 +56,30 @@ header {
 
 .row {
 	clear: both;
+}
+
+.latest-post {
+	margin: 60px 0 0 0;
+	position: relative;
+}
+
+.latest-post img {
+	max-width: 870px;
+	width: 100%;
+}
+
+.latest-post h2 {
+	border: 5px solid #ea412e;
+	padding: 20px 10px;
+	position: absolute;
+		right: 10px;
+		top: 50%;
+	width: 460px;
+	text-align: right;
+}
+
+.latest-post h2 a {
+	color: #333;
+	font: normal 3.75em "HelveticaNeue-CondensedBold"; /* 60/16 */
+	text-decoration: none;
 }
