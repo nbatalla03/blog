@@ -1,6 +1,12 @@
 body {
-	background: #f5f5f5;
+	background: #f3f3f3;
 	font: normal 100% Georgia;
+}
+
+h3 {
+	color: #555;
+	font: normal 1.5em "HelveticaNeue-CondensedBold";
+	text-transform: uppercase;
 }
 
 *, *:before, *:after {
@@ -60,6 +66,7 @@ nav ul li {
 
 .row {
 	clear: both;
+	padding: 3.125% 0;
 }
 
 .offset-30 {
@@ -71,7 +78,7 @@ nav ul li {
 }
 
 .seven-columns {
-	width: 56.25%;
+	width: 56.25%; /* 540/960 */
 }
 
 .latest-post {
@@ -98,4 +105,103 @@ nav ul li {
 	color: #333;
 	font: normal 3.75em "HelveticaNeue-CondensedBold"; /* 60/16 */
 	text-decoration: none;
+}
+
+.post-thumbnail {
+	background: #000;
+	border-radius: 3px;
+	float: left;
+	height: auto;
+	max-width: 140px;
+	width: 25.925925925925924%; /* 140/540 */
+}
+
+.recent-post-details {
+	color: #555;
+	float: left;
+	margin-left: 3.7037037037037033%; /* 20/540 */
+	max-width: 380px;
+	width: 70.37037037037037%; /* 380/540 */
+}
+
+.recent-post-list li {
+	margin-top: 3.7037037037037033%; /* 20/540 */
+}
+
+.recent-post-list li h2 {
+	font: normal 1.125em "HelveticaNeue-CondensedBold"; /* 18/16 */
+}
+
+.recent-post-list li h2 a {
+	color: #555;
+	text-decoration: none;
+}
+
+.recent-post-list p {
+	font-size: 0.875em; /* 14/16 */
+	margin-top: 1.8518518518518516%; /* 10/540 */
+}
+
+.projects {
+	background: #242424;
+}
+
+.projects-sub {
+	color: #fff;
+	display: block;
+	font-size: 0.875em;
+	letter-spacing: 2px;
+	text-align: center;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+
+.projects h4 {
+	color: #fff;
+	font-size: 2.25em;
+	font-weight: 400;
+	margin-top: 2.083333333333333%; /* 20/960 */
+	text-align: center;
+}
+
+.project-list {
+	margin: 3.125% auto; /* 30/960 */
+	max-width: 900px;
+	width: 93.75%; /* 900/960 */
+}
+
+.project-list li {
+	border-bottom: 1px dotted #444444;
+	padding: 3.125% 0; /* 30/960 */
+}
+
+.project-list li:last-child {
+	border-bottom: none;
+}
+
+.project-list li span {
+	color: #888;
+}
+
+.project-list li h2 {
+	display: inline-block;
+	font: normal 2.25em "HelveticaNeue-CondensedBold";
+	margin-left: 8.333333333333332%; /* 80/960 */
+	vertical-align: middle;
+}
+
+.project-list li h2 a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
 }
