@@ -1,33 +1,92 @@
-<%= partial '_header' %>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <title>Blog Title<%= ' - ' + current_article.title unless current_article.nil? %></title>
+    <%= stylesheet_link_tag 'normalize' %>
+    <link href="/stylesheets/main.css" media="screen" rel="stylesheet" type="text/css" />
+    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
+  </head>
+  <body>
 
-      <%= yield %>
+    <img class="logo" src="/images/header-logo.png">
+
+    <div class="main" role="main">
+      <header>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Projects</a></li>
+          </ul>
+        </nav>
+      </header>
     </div>
-    
-    <aside>
-      <h2>Recent Articles</h2>
-      <ol>
-        <% blog.articles[0...10].each do |article| %>
-          <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-        <% end %>
-      </ol>
 
-      <h2>Tags</h2>
-      <ol>
-        <% blog.tags.each do |tag, articles| %>
-          <li><%= link_to tag, tag_path(tag) %> (<%= articles.size %>)</a></li>
+    <div class="container">
+      <div class="latest-post">
+        <% blog.articles.select {|a| a.data.category != "projects"}[0...1].each do |article| %>
+          <!-- <img src="images/<%= article.data.image %>"> -->
+          <% article_image = article.data.image %>
+          <%= image_tag "#{article_image}" %>
+          <h2><a href="<%= article.url %>"><%= article.title %></a></h2>
         <% end %>
-      </ol>
+      </div>
+    </div>
 
-      <h2>By Year</h2>
-      <ol>
-        <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-          <li><%= link_to year, blog_year_path(year) %> (<%= articles.size %>)</a></li>
-        <% end %>
-      </ol>
-    </aside>
+    <div class="container">
+      <div class="row clearfix">
+        <div class="four-columns-special column offset-30">
+          <h3>Categories</h3>
+        </div>
+
+        <div class="seven-columns column clearfix">
+          <h3>Recent Posts</h3>
+
+          <ul class="recent-post-list">
+            <% blog.articles.select {|a| a.data.category != "projects"}[1..2].each do |article| %>
+              <li class="clearfix">
+                <% article_image = article.data.image %>
+                <%= image_tag "#{article_image}", class: "post-thumbnail" %>
+
+                <div class="recent-post-details">
+                  <h2><a href="<%= article.url %>"><%= article.title %></a></h2>
+                  <p><%= article.summary %></p>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="projects row">
+        <span class="projects-sub">What I'm Working On</span>
+        <h4>Recent Projects</h4>
+
+        <ul class="project-list">
+          <% blog.articles.select {|a| a.data.category == "projects"}[0..2].each do |article| %>
+            <li>
+              <span><%= article.date.strftime('%Y.%m.%d') %></span>
+              <h2><a href="<%= article.data.permalink %>/"><%= article.title %></a></h2>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        This is my book reading list
+      </div>
+    </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="./javascripts/main.js"></script>  
-    <script src="./javascripts/plugins.js"></script>
+    <script src="/javascripts/main.js"></script>  
+    <script src="/javascripts/plugins.js"></script>
   </body>
 </html>

@@ -21,12 +21,12 @@ img[src$=".gif"], img[src$=".png"] {
   -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
 }
 
-#main {
+.main {
 	background: #fff;
  	margin: 0 auto;
 	max-width: 960px;
 	overflow: hidden;
-	width: 90%:;
+	width: 90%
 }
 
 header {
@@ -51,6 +51,8 @@ nav ul li {
 }
 
 .container {
+	background: #fff;
+	margin: 0 auto;
 	max-width: 960px;
 	width: 90%;
 }
@@ -82,7 +84,8 @@ nav ul li {
 }
 
 .latest-post {
-	margin: 60px 0 0 0;
+	background: #fff;
+	padding: 6.25% 0 0 0;
 	position: relative;
 }
 
