@@ -9,6 +9,31 @@ h3 {
 	text-transform: uppercase;
 }
 
+p {
+	line-height: 150%;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+blockquote {
+	border-left: 1px solid #ddd;
+	font: normal 2.25em "HelveticaNeue-Light";
+	padding-left: 1.25em; /* 20/16 */
+}
+
+blockquote span {
+	color: #ea412e;
+	display: block;
+	font: normal 0.444em Georgia;
+	margin-top: 1.25em;
+}
+
 *, *:before, *:after {
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
@@ -85,6 +110,10 @@ nav ul li {
 
 .article-body {
 	width: 62.5%;
+}
+
+.article-body p {
+	margin: 1.875em 0 0 0;
 }
 
 .latest-post {
