@@ -1,5 +1,5 @@
 body {
-	background: #f3f3f3;
+	background: #eee;
 	font: normal 100% Georgia;
 }
 
@@ -81,6 +81,10 @@ nav ul li {
 
 .seven-columns {
 	width: 56.25%; /* 540/960 */
+}
+
+.article-body {
+	width: 62.5%;
 }
 
 .latest-post {

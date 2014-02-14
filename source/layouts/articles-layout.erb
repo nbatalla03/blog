@@ -1,0 +1,19 @@
+<%= partial "_header" %>
+
+<div class="container">
+	<% article_data = current_article.data %>
+  <div class="latest-post">
+      <%= image_tag "#{article_data["image"]}" %>
+      <h2><a href="<%= article_data["url"] %>"><%= article_data["title"] %></a></h2>
+  </div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="article-body offset-30">
+			<%= yield %>
+		</div>
+	</div>
+</div>
+
+<%= partial "_footer" %>
