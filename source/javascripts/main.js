@@ -1,5 +1,5 @@
 $(function() {
-	var titleHeight = parseFloat($('.latest-post h2').css('height'));
+#	var titleHeight = parseFloat($('.latest-post h2').css('height'));
 	var titleHeightHalf = titleHeight / 2;
 	console.log(titleHeightHalf);
 

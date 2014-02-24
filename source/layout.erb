@@ -1,5 +1,49 @@
-<%= partial "_header" %>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <title>Nelsol Batalla<%= ' - ' + current_article.title unless current_article.nil? %></title>
+    <%= stylesheet_link_tag 'normalize' %>
+    <link href="/stylesheets/main.css" media="screen" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="//use.typekit.net/vzq4zjc.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
+  </head>
+  <body>
 
-<%= yield %>
+    <header>
+      <div class="logo">
+        <h1>Nelsol Batalla</h1>
+        <p>8th Light Apprentice</p>
+      </div>
+    </header>
 
-<%= partial "_footer" %>
+    <div class="container">
+      <div class="row">
+        <div class="one-third column">
+          <div class="profile">
+            <div class="holder">
+              <h3>Nelsol Batalla</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="one-third column latest-post">
+          <span class="marker">Latest Post</span>
+          <h2>Customizing Middleman</h2>
+          <blockquote>I like to tinker. Which is why I customized my Middleman setup to my specifications.</blockquote>
+          <p>Lorem ipsum dolor amit sethi. This is a test of how this will look here.</p>
+        </div>
+
+        <div class="one-third column">
+          <span class="marker">Recent Projects</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/javascripts/main.js"></script>
+    <script src="/javascripts/plugins.js"></script>
+  </body>
+</html>
