@@ -4,31 +4,20 @@ per_page: 10
 ---
 <div class="container">
   <div class="row clearfix">
-    <div class="one-third column">
-      <div class="profile">
-        <div class="holder">
-          <h3>Nelsol Batalla</h3>
-        </div>
-      </div>
+    <div class="column profile">
+      <h3>Nelsol Batalla</h3>
     </div>
 
-    <div class="one-third column latest-post">
+    <div class="column latest-post clearfix">
       <span class="marker">Latest Post</span>
-      <% blog.articles.select {|a| a.data.category != "projects"}[0...1].each do |article| %>
-        <h2><a href="<%= article.url%>"><%= article.title %></a></h2>
-        <%= article.summary %>
-      <% end %>
-    </div>
-
-    <div class="one-third column recent-projects">
-      <span class="marker">Recent Projects</span>
-      <ul>
-        <% blog.articles.select {|a| a.data.category == "projects"}[0..2].each do |article| %>
-          <li>
-            <h3><a href="<%= article.data.permalink %>"><%= article.title %></a></h3>
-          </li>
-        <% end %>
-      </ul>
+        <ul>
+          <% blog.articles.select {|a| a.data.category != "projects"}[0..10].each do |article| %>
+            <li>
+                <h2><a href="<%= article.url%>"><%= article.title %></a></h2>
+                <%= article.summary %>
+            </li>
+          <% end %>
+        </ul>
     </div>
   </div>
 </div>
