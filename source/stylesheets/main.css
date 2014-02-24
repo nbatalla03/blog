@@ -41,6 +41,7 @@ blockquote {
 
 .row {
   clear: both;
+  padding: 1.875em 0;
 }
 
 .column {

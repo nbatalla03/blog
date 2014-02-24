@@ -1,8 +1,10 @@
 <%= partial "_header" %>
 
 <div class="container article-page">
-  <h2><%= current_article.title %></h2>
-  <%= yield %>
+  <div class="row">
+    <h2><%= current_article.title %></h2>
+    <%= yield %>
+  </div>
 </div>
 
 <%= partial "_footer" %>
