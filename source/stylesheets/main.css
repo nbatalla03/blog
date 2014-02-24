@@ -14,11 +14,23 @@ h2 {
   text-transform: uppercase;
 }
 
+h2 a {
+  color: #ff401a;
+  text-decoration: none;
+}
+
+p {
+  color: #7f7f7d;
+  font: normal 1.2em "adobe-caslon-pro";
+  font-weight: 400;
+  margin: 1.25em 0 0 0;
+}
+
 blockquote {
   color: #4a4a4c;
   font: normal 1em "news-gothic-std";
   font-weight: 900;
-  margin: 5% 0 0 0;
+  margin: 1.25em 0 0 0;
   text-transform: uppercase;
 }
 
@@ -57,8 +69,10 @@ blockquote {
     font-weight: 100;
   }
   .logo p {
+    color: #fff;
     font: normal 18px "adobe-caslon-pro";
     font-weight: 400;
+    margin: 0;
   }
 
 .profile {
@@ -75,17 +89,39 @@ blockquote {
   }
     .holder h3 {
       color: #4a4a4c;
-      font: normal 1.2em "news-gothic-std";
+      font: normal 0.8em "news-gothic-std";
       font-weight: 900;
       text-transform: uppercase;
     }
 
-.latest-post p {
-  color: #7f7f7d;
-  font: normal 1.2em "adobe-caslon-pro";
-  font-weight: 400;
-  margin: 5% 0 0 0;
+.recent-projects li {
+  background: #f5f0e9;
+  margin: 0.625em 0 0 0;
+  padding: 5px 10px;
 }
+.recent-projects ul li h3 {
+  color: #989694;
+  font: normal 1.5em "refrigerator-deluxe";
+  text-transform: uppercase;
+}
+  .recent-projects h3 a {
+    color: #989694;
+    text-decoration: none;
+  }
+
+.article-page {
+  padding: 0 20%;
+}
+  .article-page h2 {
+    font-size: 3.2em;
+  }
+  .article-page blockquote {
+    font-size: 1.6em;
+    margin: 0.55em 0 0 0;
+  }
+  .article-page p {
+    font-size: 1.5em;
+  }
 
 /* Global */
 .marker {
