@@ -77,22 +77,27 @@ blockquote {
   }
 
 .profile {
-  background: #eff0ef;
-  border-radius: 3px;
+  background: #000;
   padding: 5px;
-  width: 100%;
+  width: 20%;
 }
-  .holder {
-    background: #fff;
-    border: 1px solid #d0d5cb;
-    border-radius: 3px;
-    padding: 3%;
+  .profile h3 {
+    color: #4a4a4c;
+    font: normal 0.8em "news-gothic-std";
+    font-weight: 900;
+    text-transform: uppercase;
   }
-    .holder h3 {
-      color: #4a4a4c;
-      font: normal 0.8em "news-gothic-std";
-      font-weight: 900;
-      text-transform: uppercase;
+
+.latest-post {
+  width: 78%;
+}
+  .latest-post ul li:nth-child(odd) {
+    margin-left: 0;
+  }
+    .latest-post li {
+      float: left;
+      margin: 2% 0 0 2%;
+      width: 49%;
     }
 
 .recent-projects li {
