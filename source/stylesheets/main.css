@@ -1,145 +1,123 @@
 body {
-  background: #faf6f1;
-  font: normal 100% "adobe-caslon-pro";
+  background: #f8f8f8;
+  font: normal 100% "museo";
 }
 
 *, *:before, *:after {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
+header {
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 1.625em 5%;
+  width: 100%;
+}
+
 h2 {
-  color: #ff401a;
-  font: normal 1.7em "futura-pt";
-  font-weight: 900;
+  color: #333;
+  font: normal 1.728em "futura-pt";
+  font-weight: 700;
+  margin: 0.694em 0 0.625em 0;
   text-transform: uppercase;
 }
 
-h2 a {
-  color: #ff401a;
-  text-decoration: none;
-}
-
-p {
-  color: #7f7f7d;
-  font: normal 1.2em "adobe-caslon-pro";
-  font-weight: 400;
-  margin: 1.25em 0 0 0;
-}
-
-blockquote {
-  color: #4a4a4c;
-  font: normal 1em "news-gothic-std";
-  font-weight: 900;
-  margin: 1.25em 0 0 0;
+h3 {
+  border: 3px solid #ed5f16;
+  color: #ed5f16;
+  display: inline-block;
+  font: normal 0.8em "futura-pt";
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 0.3125em 1.25em;
   text-transform: uppercase;
 }
 
-.container {
-  margin: 0 auto;
-  width: 90%;
-}
-
-.row {
-  clear: both;
-  padding: 1.875em 0;
-}
-
-.column {
-  float: left;
-  margin: 0 0 0 2%;
-}
-  .column:first-child {
-    margin-left: 0;
-  }
-
-.one-third {
-  width: 32%;
+strong {
+  font-weight: bold;
 }
 
 .logo {
-  background: url('../images/logo-bg.png') no-repeat;
-  color: #fff;
-  height: 200px;
-  margin: 30px auto;
-  padding: 65px 0;
-  text-align: center;
-  width: 200px;
+  color: #bbb;
+  font: normal 1.05em "futura-pt";
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
 }
-  .logo h1 {
-    font: normal 35px "pupcat";
-    font-weight: 100;
-  }
-  .logo p {
-    color: #fff;
-    font: normal 18px "adobe-caslon-pro";
-    font-weight: 400;
-    margin: 0;
+
+.sidebar {
+  float: left;
+  padding: 5% 5%;
+  width: 40%;
+}
+  .sidebar p {
+    color: #333;
+    font: normal 2.986em "futura-pt";
   }
 
-.profile {
-  background: #000;
-  padding: 5px;
-  width: 20%;
-}
-  .profile h3 {
-    color: #4a4a4c;
-    font: normal 0.8em "news-gothic-std";
-    font-weight: 900;
-    text-transform: uppercase;
-  }
+.project-list {
 
-.latest-post {
-  width: 78%;
 }
-  .latest-post ul li:nth-child(odd) {
-    margin-left: 0;
+  .project-list h3 {
+    color: #aaa;
+    border: none;
+    border-bottom: 1px solid #eee;
+    margin: 1.2em 0 0 0;
+    padding: 0 0 0.625em 0;
+    width: 100%;
   }
-    .latest-post li {
+  .project-list ul {
+    margin: 1.2em 0 0 0;
+  }
+    .project-list ul li {
+      color: #2c94d1;
       float: left;
-      margin: 2% 0 0 2%;
-      width: 49%;
+      font-weight: 700;
+      margin: 0 0 0 0.625em;
     }
+      .project-list ul li:first-child {
+        margin-left: 0;
+      }
 
-.recent-projects li {
-  background: #f5f0e9;
-  margin: 0.625em 0 0 0;
-  padding: 5px 10px;
+.main {
+  float: right;
+  padding: 5% 5%;
+  width: 60%;
 }
-.recent-projects ul li h3 {
-  color: #989694;
-  font: normal 1.5em "refrigerator-deluxe";
-  text-transform: uppercase;
+
+.articles {
+  margin: 4.3em 0 0 0;
+  text-align: left;
 }
-  .recent-projects h3 a {
-    color: #989694;
-    text-decoration: none;
+  .articles:first-child {
+    margin-top: 0;
+  }
+  .date {
+    color: #aaa;
+    display: block;
+    font: italic 1em "museo";
+    margin: 1.2em 0 0 0;
+  }
+  .articles h2 {
+    margin-top: 0;
+  }
+  .articles p {
+    color: #918f8c;
+    font: normal 1.2em "museo";
+    line-height: 170%;
+    margin: 0.625em 0 0 0;
   }
 
-.article-page {
-  padding: 0 20%;
-}
-  .article-page h2 {
-    font-size: 3.2em;
-  }
-  .article-page blockquote {
-    font-size: 1.6em;
-    margin: 0.55em 0 0 0;
-  }
-  .article-page p {
-    font-size: 1.5em;
-  }
-
-/* Global */
-.marker {
-  color: #e0ddd9;
+/* misc */
+.separator {
+  background: #ddd;
   display: block;
-  font: normal 0.7em "news-gothic-std";
-  font-weight: 400;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  height: 3px;
+  margin: 1.25em 0 0 0;
+  width: 60px;
 }
 
-/* Clearfix */
+/* clearfix */
 .clearfix:before,
 .clearfix:after {
     content: " "; /* 1 */

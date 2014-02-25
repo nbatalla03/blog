@@ -2,22 +2,36 @@
 pageable: true
 per_page: 10
 ---
-<div class="container">
-  <div class="row clearfix">
-    <div class="column profile">
-      <h3>Nelsol Batalla</h3>
-    </div>
+<div class="sidebar">
+  <p>Hi, my name is</p>
+  <p><strong>Nelsol Batalla!</strong></p>
+  <p>I'm a UX Apprentice</p>
+  <p>at 8th Light.</p>
 
-    <div class="column latest-post clearfix">
-      <span class="marker">Latest Post</span>
-        <ul>
-          <% blog.articles.select {|a| a.data.category != "projects"}[0..10].each do |article| %>
-            <li>
-                <h2><a href="<%= article.url%>"><%= article.title %></a></h2>
-                <%= article.summary %>
-            </li>
-          <% end %>
-        </ul>
-    </div>
+  <div class="project-list">
+    <h3>Projects</h3>
+
+    <ul>
+      <li>Tyopgraphy</li>
+      <li>Positioning</li>
+    </ul>
+  </div>
+</div>
+
+<div class="main">
+  <div class="articles">
+    <h3>Blog</h3>
+    <span class="date">February 25, 2014</span>
+    <h2>Customizing Middleman</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget volutpat diam, eget tristique nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+    <span class="separator"></span>
+  </div>
+
+  <div class="articles">
+    <h3>Blog</h3>
+    <span class="date">February 25, 2014</span>
+    <h2>Customizing Middleman</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget volutpat diam, eget tristique nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+    <span class="separator"></span>
   </div>
 </div>
