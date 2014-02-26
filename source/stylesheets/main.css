@@ -50,6 +50,11 @@ strong {
   padding: 5% 5%;
   width: 40%;
 }
+  .avatar {
+    border-radius: 100px;
+    height: 100px;
+    width: 100px;
+  }
   .sidebar p {
     color: #333;
     font: normal 2.986em "futura-pt";
@@ -101,12 +106,21 @@ strong {
   .articles h2 {
     margin-top: 0;
   }
+  .articles h2 a {
+    color: #333;
+    text-decoration: none;
+  }
   .articles p {
     color: #918f8c;
     font: normal 1.2em "museo";
     line-height: 170%;
     margin: 0.625em 0 0 0;
   }
+
+.single-article {
+  padding: 0 20%;
+  width: 100%;
+}
 
 /* misc */
 .separator {
