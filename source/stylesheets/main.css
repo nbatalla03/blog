@@ -26,7 +26,7 @@ h3 {
   border: 3px solid #ed5f16;
   color: #ed5f16;
   display: inline-block;
-  font: normal 0.8em "futura-pt";
+  font: normal 0.833em "futura-pt";
   font-weight: 700;
   letter-spacing: 2px;
   padding: 0.3125em 1.25em;
@@ -118,9 +118,18 @@ strong {
   }
 
 .single-article {
-  padding: 0 20%;
+  padding: 0 20% 4.3em;
   width: 100%;
 }
+ .single-article h2 {
+   font-size: 2.986em;
+ }
+ .single-article h3 {
+   color: #aaa;
+   border: none;
+   margin: 2.074em 0 0 0;
+   padding: 0;
+ }
 
 /* misc */
 .separator {
@@ -134,10 +143,10 @@ strong {
 /* clearfix */
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+  content: " "; /* 1 */
+  display: table; /* 2 */
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
