@@ -6,14 +6,85 @@ image: customizing-middleman.jpg
 layout: articles-layout
 ---
 
-<p>The intention of this blog post is not to be an exhaustive tutorial on customizing Middleman, instead I'll cover a few things I customized to fit my needs.</p>
+<p>The intention of this blog post is not to be an exhaustive tutorial on customizing 
+Middleman, instead I'll cover a few things I customized to fit my needs.</p>
 
 SPLIT_SUMMARY_BEFORE_THIS
 
-<h4>Custom Loops</h4>
-<p>If you view the homepage of my blog you'll notice that the most recent post takes up a large chunk of the real estate with a large image and the title encapsulated within a red box. Below that you'll find two recent blog posts (at the time of writing this there is only one).</p>
+<h4>Organizing Blog Articles</h4>
+<p>By default, Middleman puts all your articles in the source directory, which contain 
+files such as your index, layout, feed, calendar, etc... You can imagine as your blog 
+post count grows, it will become increasingly cumbersome to sort through your source folder.</p>
 
+<p>Luckily there is a simple solution. By opening your <strong>config.rb</strong> 
+(located in the source folder) and adding the following line of code between the active 
+<strong>:blog do |blog|</strong> block:</p>
 
-# Show image with arrows pointing to elemenets discussed in previous paragraph.
-# Using front matter to assign images (maybe even show what the data structure looks like)
-# Custom query to iterate over project category
+<script src="https://gist.github.com/nbatalla03/9318774.js"></script>
+
+<p>In plain english the above code tells Middleman to look in the <strong>articles</strong> 
+directory with the filename format of <strong>{year}-{month}-{day}-{title}.html</strong>.</p>
+
+<p>The next step is to create a directory named articles inside your source folder and add 
+all your blog articles in this folder with the above file naming format. It is very important 
+you follow the file naming format aboving, otherwise Middleman can't find your articles.</p>
+
+<p>I would like to point out that you can name your directory and file name format differently. 
+Just make sure that they match up to blog.sources portion in your config.rb file.</p>
+
+<h4>Project Structure</h4>
+<p>Since we are on the topic of organization, having projects in its own directory helps 
+keeps things seperated and in the long run easier to maintain.</p>
+
+<p>For example, I had to make a typography projects for my apprenticeship. This project 
+was going to have it's own unique layout, look, feel, and style. Originally I was going 
+to put everything into my main CSS file which contained the styling for the site you are
+looking at now. I immediate shot down that idea, as it would be a management nightmare 
+making sure I didn't duplicate class names.</p>
+
+<p>By having a seperate folder for each project I am able to make as many projects as I want
+without worry of overlap. To implement this you'll have to create a layout file and place
+it inside the layouts directory. The name of the file is up to you, I named my
+<strong>projects-layout.erb</strong>. The only piece of code you'll have to put inside the
+projects-layout file is:</p>
+
+<script src="https://gist.github.com/nbatalla03/9319234.js"></script>
+
+<p>The reason for having a layout for projects, is simply because Middleman will pull the
+default layout if nothing is declared, we don't want this because we need a blank slate
+so we can style our project however we want without pulling from the blog styles.</p>
+
+<p>Ok, we are at the home stretch. If this is a little confusing, I want you think about how
+you would start a project. I imagine it would look something like create and index page, a CSS file,
+maybe some javascript. If that is your typically flow, you'll find this process exactly the same, with
+one difference. That difference is adding this piece of code above each page of your project.</p>
+
+<script src="https://gist.github.com/nbatalla03/9319351.js"></script>
+
+<p>Middleman calls this frontmatter, I won't go into detail regarding frontmatter, Middleman docs cover
+this really well. Basically this piece of frontmatter code stops Middleman from using the default layout
+and instead use the projects-layout instead.</p>
+
+<h4>Project List</h4>
+<p>Middleman has a blog gem that makes it easy to iterate over your blog articles and list them, you can 
+see this in action by going to my homepage. I wanted a way to iterate over all my projects and list them,
+instead of having to manually add each projects I made into the list.</p>
+
+<p>Middleman makes this process relatively easy to do. Please view the following code:</p>
+
+<script src="https://gist.github.com/nbatalla03/9319403.js"></script>
+
+<p>The above code still iterates over all my articles, but checks to see if the category is filed under
+<strong>projects</strong>. The code will run through all my articles and return all articles file under
+projects and will list the latest 10. With the list of articles I can grab, the name of the project and
+permalink via it's frontmatter:</p>
+
+<script src="https://gist.github.com/nbatalla03/9319487.js"></script>
+
+<p>You're probably wondering why I'm iterating over blog articles to find projects. Short answer, I haven't
+found a better solution than this. So to link to a project you simply make a new article with the frontmatter
+setup in the example code above. Just make sure that the name of the directory of your project matches the
+permalink in the frontmatter.</p>
+
+<p>There is so much more you can do with Middleman. Read their documentation, it's pretty well laid out.
+Have fun customizing!</p>
