@@ -176,6 +176,10 @@ strong {
 }
 
 @media screen and (max-width: 880px) {
+  header {
+    text-align: center;
+  }
+
   .sidebar {
     float: none;
     font-size: 100%;
