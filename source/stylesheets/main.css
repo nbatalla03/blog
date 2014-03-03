@@ -118,7 +118,7 @@ strong {
     text-decoration: none;
   }
   .articles p {
-    color: #999;
+    color: #555;
     font: normal 1.2em "museo";
     line-height: 170%;
     margin: 0.625em 0 0 0;
@@ -132,7 +132,7 @@ strong {
    font-size: 2.986em;
  }
  .single-article h4 {
-   color: #999;
+   color: #555;
    border: none;
    margin: 2.074em 0 0 0;
    padding: 0;
