@@ -44,6 +44,10 @@ strong {
   letter-spacing: 5px;
   text-transform: uppercase;
 }
+  .logo a {
+    color: #bbb;
+    text-decoration: none;
+  }
 
 .sidebar {
   float: left;
@@ -63,6 +67,10 @@ strong {
 .project-list {
 
 }
+  .project-list a {
+    color: #2c94d1;
+    text-decoration: none;
+  }
   .project-list h3 {
     color: #aaa;
     border: none;
@@ -75,7 +83,6 @@ strong {
     margin: 1.2em 0 0 0;
   }
     .project-list ul li {
-      color: #2c94d1;
       float: left;
       font-weight: 700;
       margin: 0 0 0 0.625em;
