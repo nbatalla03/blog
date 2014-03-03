@@ -42,6 +42,7 @@ strong {
   font: normal 1.05em "futura-pt";
   font-weight: 700;
   letter-spacing: 5px;
+  margin-right: -5px;
   text-transform: uppercase;
 }
   .logo a {
