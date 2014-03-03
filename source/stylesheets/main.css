@@ -140,7 +140,7 @@ strong {
    letter-spacing: 2px;
    text-transform: uppercase;
  }
- .gist-file {
+ .gist-file{
    border-bottom: none !important;
    margin-top: 2.074em;
    margin-bottom: 2.074em !important;
@@ -228,16 +228,16 @@ strong {
   }
 }
 
-@media screen and (max-width: 870px) {
-  .single-article h2 {
-    font-size: 2.074em;
-  }
-}
+/* @media screen and (max-width: 870px) { */
+/*   .single-article h2 { */
+/*     font-size: 2.074em; */
+/*   } */
+/* } */
 
 @media screen and (max-width: 500px) {
-  .single-article h2 {
-    font-size: 1.728em;
-  }
+  /* .single-article h2 { */
+  /*   font-size: 1.728em; */
+  /* } */
 
   .single-article h4 {
     font-size: 1.2em;
@@ -245,7 +245,7 @@ strong {
 }
 
 @media screen and (max-width: 430px) {
-  h2, .single-article h2 {
+  h2 {
     font-size: 1.2em;
   }
 
