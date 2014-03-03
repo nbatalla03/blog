@@ -161,3 +161,42 @@ strong {
 .clearfix:after {
   clear: both;
 }
+
+/* Media Queries */
+@media screen and (max-width: 1260px) {
+  .sidebar {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .sidebar {
+    font-size: 70%;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .sidebar {
+    float: none;
+    font-size: 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .project-list ul li {
+    display: inline;
+    float: none;
+  }
+
+  .main {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .sidebar p {
+    font-size: 2.488em;
+  }
+}
