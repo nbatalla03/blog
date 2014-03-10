@@ -26,7 +26,7 @@ directory with the filename format of <strong>{year}-{month}-{day}-{title}.html<
 
 <p>The next step is to create a directory named articles inside your source folder and add 
 all your blog articles in this folder with the above file naming format. It is very important 
-you follow the file naming format aboving, otherwise Middleman can't find your articles.</p>
+you follow the file naming format above, otherwise Middleman can't find your articles.</p>
 
 <p>I would like to point out that you can name your directory and file name format differently. 
 Just make sure that they match up to blog.sources portion in your config.rb file.</p>
@@ -35,10 +35,10 @@ Just make sure that they match up to blog.sources portion in your config.rb file
 <p>Since we are on the topic of organization, having projects in its own directory helps 
 keeps things seperated and in the long run easier to maintain.</p>
 
-<p>For example, I had to make a typography projects for my apprenticeship. This project 
+<p>For example, I had to make a typography project for my apprenticeship. This project 
 was going to have it's own unique layout, look, feel, and style. Originally I was going 
 to put everything into my main CSS file which contained the styling for the site you are
-looking at now. I immediate shot down that idea, as it would be a management nightmare 
+looking at now. I immediately shot down that idea, as it would be a management nightmare 
 making sure I didn't duplicate class names.</p>
 
 <p>By having a seperate folder for each project I am able to make as many projects as I want
@@ -49,14 +49,13 @@ projects-layout file is:</p>
 
 <script src="https://gist.github.com/nbatalla03/9319234.js"></script>
 
-<p>The reason for having a layout for projects, is simply because Middleman will pull the
-default layout if nothing is declared, we don't want this because we need a blank slate
+<p>The reason for having a layout for projects, is to bypass Middleman's default layout, we don't want this because we need a blank slate
 so we can style our project however we want without pulling from the blog styles.</p>
 
 <p>Ok, we are at the home stretch. If this is a little confusing, I want you think about how
-you would start a project. I imagine it would look something like create and index page, a CSS file,
-maybe some javascript. If that is your typically flow, you'll find this process exactly the same, with
-one difference. That difference is adding this piece of code above each page of your project.</p>
+you would start a project. I imagine it would look something like create an index page, a CSS file,
+and maybe even a Javascript file. If that is your typical setup, you'll find this process exactly the same, with
+with one difference. That difference is adding this piece of code above each page of your project.</p>
 
 <script src="https://gist.github.com/nbatalla03/9319351.js"></script>
 
@@ -69,14 +68,13 @@ and instead use the projects-layout instead.</p>
 see this in action by going to my homepage. I wanted a way to iterate over all my projects and list them,
 instead of having to manually add each projects I made into the list.</p>
 
-<p>Middleman makes this process relatively easy to do. Please view the following code:</p>
+<p>Middleman makes this process relatively easy to do:</p>
 
 <script src="https://gist.github.com/nbatalla03/9319403.js"></script>
 
 <p>The above code still iterates over all my articles, but checks to see if the category is filed under
-<strong>projects</strong>. The code will run through all my articles and return all articles file under
-projects and will list the latest 10. With the list of articles I can grab, the name of the project and
-permalink via it's frontmatter:</p>
+<strong>projects</strong>. The code will run through all my articles and return all articles filed under
+projects and will show the latest 10.</p>
 
 <script src="https://gist.github.com/nbatalla03/9319487.js"></script>
 
@@ -85,5 +83,5 @@ found a better solution than this. So to link to a project you simply make a new
 setup in the example code above. Just make sure that the name of the directory of your project matches the
 permalink in the frontmatter.</p>
 
-<p>There is so much more you can do with Middleman. Read their documentation, it's pretty well laid out.
-Have fun customizing!</p>
+<h4>Resources</h4>
+<p>Middleman has great documentation, I recommend taking a look at their documentation on <a href="http://middlemanapp.com/basics/frontmatter/">frontmatter</a>, <a href="http://middlemanapp.com/basics/helpers/">template helpers</a>, and <a href="http://middlemanapp.com/basics/templates/">templates</a> to get started.</p>
