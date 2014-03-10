@@ -29,7 +29,7 @@ h3 {
   font: normal 0.833em "futura-pt";
   font-weight: 700;
   letter-spacing: 2px;
-  padding: 0.3125em 1.25em;
+  padding: 0.3125em 1.25em 0.625em;
   text-transform: uppercase;
 }
 
@@ -108,7 +108,7 @@ strong {
   .date {
     color: #aaa;
     font: italic 1em "museo";
-    margin: 1.2em 0 0 0.625em;
+    margin: 1.2em 0 0 0;
   }
   .articles h2 {
     margin-top: 0.694em;
