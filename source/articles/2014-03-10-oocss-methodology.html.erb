@@ -1,0 +1,58 @@
+---
+title: OOCSS Methodology
+date: 2014-03-10 15:15 UTC
+category: General
+layout: articles-layout
+---
+
+<p>I recently attended a presentation that covered reusable HTML, CSS, and JS. During the presentation I was re-introduced to OOCSS, a CSS methodology that I have heard about in the past, but never really dug into.</p>
+
+<p>I've been looking to challenge how I currently approach CSS, and OOCSS seemed like a good place to start.</p>
+
+<h4>What is OOCSS?</h4>
+
+
+<p>OOCSS, stands for Object Oriented CSS. It was a methodology pioneered by Nicole Sullivan to encourage code reuse, efficiency, and maintainability in CSS.</p>
+
+<h4>The Two Principles of OOCSS</h4>
+
+
+<p><strong>Separate Structure and Skin</strong></p>
+
+<p>Have you ever written CSS that looked like this:</p>
+
+<script src="https://gist.github.com/nbatalla03/9466141.js"></script>
+
+
+<p>You probably noticed that there is a lot of code duplication. If we apply the OOCSS principle of separating structure and skin, we get something like this:</p>
+
+<script src="https://gist.github.com/nbatalla03/9466184.js"></script>
+
+
+<p>By structuring our CSS like so, we have removed duplicate code and made our code more reusable.</p>
+
+<p><strong>Separation of Containers and Content</strong></p>
+
+<p>The second principle of of OOCSS is separating containers and content. Again, I think it's best to dive into code to demonstrate this principle. The following is how you might code without using OOCSS principles:</p>
+
+<script src="https://gist.github.com/nbatalla03/9466787.js"></script>
+
+
+<p>Based on the OOCSS methodology an object should look the same no matter where you put it, the above code breaks this. Instead OOCSS suggests using code that looks like this:</p>
+
+<script src="https://gist.github.com/nbatalla03/9466842.js"></script>
+
+
+<p>Removing location-dependent styles gives us consistency, by taking the <code>h3</code> tag and placing it elsewhere it should look the same. If you wanted to style it differently, simply create a new class.</p>
+
+<h4>Final Thoughts</h4>
+
+
+<p>I believe OOCSS is a step in the right direction. However I suggest you take this new methodology and slowly apply it to your current way of writing CSS.</p>
+
+<p>I certainly had my gripes with OOCSS, in particular, the lack of using location-dependent styles made my HTML more bloated. For now, I'll continue to use OOCSS and tweak it for my needs. I'll go over in more detail my personal gripes when I have a few more projects under my belt using this methodology.</p>
+
+<h4>Resource </h4>
+
+
+<p>To get a quick primer on OOCSS, head on over to Nicole Sullivan's OOCSS wiki page <a href="https://github.com/stubbornella/oocss/wiki">here</a>.</p>
