@@ -1,0 +1,52 @@
+---
+title: SMACSS
+date: 2014-03-17 05:54 UTC
+category: General
+layout: articles-layout
+---
+
+<p>Continuing my exploration on challenging the way I write CSS, I stumbled onto SMACSS, which stands for scalable and modular architecture CSS.</p>
+
+<p>I haven't dug into SMACSS enough yet to properly write a blog post on it's intricacies. What I do want to quickly cover is how SMACSS organizes CSS, something which was not covered in OOCSSS.</p>
+
+<p>For the past two years, I've had my own system of organizing my CSS. It worked great for me, because I was the sole front-end developer. Apprenticing at 8th Light forced me to take a step back, and make serious considerations of the organization of my CSS, since I won't be the only one looking at the code.</p>
+
+<h4>The Fab Five</h4>
+
+<p>SMACSS centers around five types of categories. They are base, layout, module, state, and theme. By using these categorizations we can more clearly see patterns and build better practices around these patterns, according to Johnathan Snook, the creator of SMACCS.</p>
+
+<p><strong>Base</strong></p>
+
+<p>The base category consists of element selectors, descendants selectors, child selectors, attribute selectors, and any pseudo classes.</p>
+
+<script src="https://gist.github.com/nbatalla03/9594343.js"></script>
+
+
+<p><strong>Layout</strong></p>
+
+<p>The layout category will contain your styles that are common across your entire sites. SMACCS suggests using IDs, however I've personally taken a liking to using OOCSS methodology of mostly using classes, in the event I want to reuse some the style. I'll typically us IDs for Javascript hooks.</p>
+
+<script src="https://gist.github.com/nbatalla03/9594410.js"></script>
+
+
+<p><strong>Module</strong></p>
+
+<p>The idea behind the module category is to be able to reuse a chunk of code without it breaking when put elsewhere on your site. It's imperative you only use class names in order to keep it's modularity intact.</p>
+
+<script src="https://gist.github.com/nbatalla03/9594513.js"></script>
+
+
+<p><strong>State</strong></p>
+
+<p>States change and override existing styles. A great example would be the window style navigation which has a different background color giving you an indication of what part of the site you are on.</p>
+
+<script src="https://gist.github.com/nbatalla03/9594559.js"></script>
+
+
+<p><strong>Theme</strong></p>
+
+<p>Theming is an optional category in SMACCS. It's only applicable to pages that require theming which overrides and extend modules, and typically changes colors and backgrounds.</p>
+
+<h4>Thoughts</h4>
+
+<p>I still have to do a deeper dive into SMACSS before I can give a more through post about it. Just as I have my gripes with OOCSS, I too will undoubtedly will have my gripes with SMACSS. The important thing is to continue learning and take bits and pieces from both methodologies and apply what works for you.</p>
