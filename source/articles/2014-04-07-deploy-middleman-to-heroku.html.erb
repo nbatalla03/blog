@@ -1,0 +1,62 @@
+---
+title: Deploy Middleman To Heroku
+date: 2014-04-07 02:59 UTC
+category: General
+layout: articles-layout
+---
+
+<p>Imagine you just typed the last line of code in your latest project and are eager to deploy your creation for the world to see. You settle on Heroku because you hear it's easy, only to find out that it wasn't as straight forward as you were hoping.</p>
+
+<p>Luckily, I already went through the headache of sifting through the multiple setup options available online and laid it out in a simple step by step process.</p>
+
+<h4>Prerequisites</h4>
+
+<p>-Have your Middleman project in a Github repo.</p>
+
+
+<p>-Have <a href="http://bundler.io/">Bundler installed</a></p>
+
+
+<p>-Have a Heroku account</p>
+
+
+<p>-Have Heroku Toolbelt installed</p>
+
+
+<h4>Middleman Setup</h4>
+
+<p>Before I get into the details of Heroku, we'll need to add a few things to our Middleman project.</p>
+
+<p><strong>Gemfile</strong></p>
+
+<p>Open up your Gemfile and add the following:</p>
+
+<script src="https://gist.github.com/nbatalla03/10014059.js"></script>
+
+
+<p>Once you add those gems into your Gemfile, open up your terminal and run the command <strong>bundle install</strong> in the root of your Middleman project. This installs the gems you just added to your Gemfile.</p>
+
+<p><strong>Config.ru</strong></p>
+
+<p>Next you're going to create a Config.ru file in the <strong>source</strong> folder in your Middleman project. Once you create the Config.ru file, add the following code:</p>
+
+<script src="https://gist.github.com/nbatalla03/10014099.js"></script>
+
+
+<p>That's it for the first part of this step by step.</p>
+
+<h4>Heroku Setup</h4>
+
+<p>If you haven't already done so, please head on over to Heroku.com and create an account, the signup process is straight forward and FREE!</p>
+
+<p>After you have setup your free Heroku account, install the Heroku Toolbelt, you can download that here: <a href="https://toolbelt.heroku.com/">https://toolbelt.heroku.com/</a>. Follow the <strong>heroku login</strong> instructions under the Getting Started section, but ignore the <strong>heroku create</strong> instructions for the time being.</p>
+
+<p><strong>Heroku Create</strong></p>
+
+<p>If you haven't already done so, open up your command line terminal and cd into your Middleman project folder.</p>
+
+<p>Once you're in your Middleman project folder type the command <strong>heroku create</strong>. This will generate a random Heroku URL where your project will be hosted.</p>
+
+<p>Make sure you have committed all your latest changes to your project's Github repo before running the following command in your terminal: <strong>git push heroku master</strong>. This command will now push the compiled version of your Middleman project onto Heroku's server. This process takes a few seconds to complete, let it run.</p>
+
+<p>Once the process completes you can view your newly deployed Middleman project by typing <strong>heroku open</strong> or typing the auto generated URL Heroku provided in your browser.</p>

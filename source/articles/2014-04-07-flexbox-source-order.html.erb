@@ -1,0 +1,37 @@
+---
+title: Flexbox Source Order
+date: 2014-04-07 04:29 UTC
+category: General
+layout: articles-layout
+---
+
+<p>I've been reading about <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">Flexbox</a> primarily because it claims to be a more efficient way to layout designs. I'm still digging into Flexbox and I'll get into a more detailed post on a later date. In this particular post I want to go over a Flexbox property: <strong>order</strong>.</p>
+
+<h4>Order</h4>
+
+<p>What's so interesting about order?</p>
+
+<blockquote>
+The CSS order property specifies the order used to lay out flex items in their flex container. Elements are laid out by ascending order of the order value. Elements with the same order value are laid out in the order they appear in the source code.
+</blockquote>
+
+
+<p>-Mozilla</p>
+
+<p>I found this property particularly interesting because it reminded me of a problem I ran into during my early days of web design which I couldn't find a solution to. SEO was a huge consideration in how I structured my code, it would often take precedence over aesthetics. Take this code for example:</p>
+
+<script src="https://gist.github.com/nbatalla03/10014611.js"></script>
+
+
+<p>Did you catch the difference? In the SEO optimized version, the content class comes above the sidebar, this is ideal because the content class will been seen first by the search engine spiders. For simplicity sake, you want your content to be seen as soon as possible to help increase your SEO score.</p>
+
+<p>The second example has the content class drop below the sidebar, which isn't ideal for SEO. However, being a web designer, having the same design layout isn't good for my health, I NEED variety! Luckily there was a simple fix, I would simply change the float on the content to right and left for the sidebar if I wanted to swap them.</p>
+
+<p>You're probably wondering, didn't this solve my problem then without using Flexbox's order? Not quite, the example code above was the best I could do given what was available to me at the time. What I truly wanted was something like this:</p>
+
+<script src="https://gist.github.com/nbatalla03/10014747.js"></script>
+
+
+<p>If you'll notice, the content class is on the top! I admit this is probably going a bit extreme, but hey, this was something I wanted to achieve during that time but couldn't. Today with Flexbox, this is achievable. To see it in action please view my jsfiddle here: <a href="http://jsfiddle.net/abAA5/2/">http://jsfiddle.net/abAA5/2/</a>.</p>
+
+<p>You'll notice in the HTML the content class is on the top, however the rendered result shows the content class is in the third position. That's it for now!</p>
