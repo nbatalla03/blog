@@ -1,0 +1,55 @@
+html {
+  font-size: 100%;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: #edf0f0;
+	font: normal 100% Georgia;
+}
+
+h1 {
+  color: #f06b12;
+  font: 400 3rem "HelveticaNeue-CondensedBold";
+  text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+}
+
+h1 span {
+  color: #888;
+  font: 400 2.5rem "HelveticaNeue-Thin";
+  display: block;
+}
+
+.welcome {
+  background: #e6e7e8;
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
+}
+
+.column {
+  float: left;
+  margin: 0 0 0 2%;
+}
+
+.column:first-child {
+  margin-left: 0;
+}
+
+.row {
+  clear: both;
+}
+
+.row-padding {
+  padding: 6rem 0;
+}
+
+.one-third {
+  background: #ddd;
+  width: 32%;
+}
