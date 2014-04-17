@@ -1,0 +1,287 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+/* Base */
+html {
+  font-size: 100%;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  border-right: 30px solid #000;
+  font: normal 100% Georgia;
+  padding: 0 0 3rem 0;
+  width: 1200px;
+}
+
+h2 {
+  color: #f4ed00;
+  font-size: 1.5rem;
+}
+
+h1, h2, p {
+  font-family: "aktiv-grotesk-std";
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.intro {
+  border: 2px solid #000;
+  float: right;
+  width: 800px;
+}
+
+.intro p {
+  padding: 0.5rem 1rem;
+}
+
+.intro h1 {
+  padding: 0.5rem 1rem 1rem;
+}
+
+.intro h1 {
+  font-size: 2.3rem;
+}
+
+.page-indicator {
+  background: #b9b5b2;
+  border-left: 1px solid #000;
+  float: right;
+}
+
+.first-image {
+  max-width: 750px;
+}
+
+.second-image {
+  max-width: 695px;
+}
+
+aside {
+  margin: 1rem 0 0 0;
+  padding: 0 0 0 2.5rem;
+}
+
+aside:before {
+  background: #000;
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+}
+
+aside p {
+  color: #009ce1;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0 0 0 1.2rem;
+}
+
+.content p {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/* Layout */
+nav {
+  padding: 1rem 1rem 5rem 0;
+  text-align: right;
+  a {
+    color: #ff4141;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+}
+header {
+  padding-right: 20px;
+  width: 100%;
+}
+
+.logo {
+  left: 81px;
+  max-width: 270px;
+  position: relative;
+  width: 100%;
+}
+
+footer {
+  padding: 0 1rem 0 4.7rem;
+  p {
+    font-size: 0.9rem;
+    font-weight: 200;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+  }
+  strong {
+    font-weight: 400;
+  }
+}
+
+/* Modules */
+.one-third {
+  width: 400px;
+}
+
+.two-thirds {
+  width: 750px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #000;
+}
+
+.column {
+  float: left;
+}
+
+.reverse-float {
+  float: right;
+}
+
+.row {
+  display: block;
+}
+
+.row-padding {
+  padding: 2rem 0;
+}
+
+.baby-blue {
+  color: #269cd2;
+}
+
+.title { 
+  padding: 0.5rem 0 1rem 1rem;
+  position: relative;
+  &.blue {
+    background: #009ce1;
+    &:after {
+      border-top: 69px solid transparent;
+      border-bottom: 69px solid transparent;
+      border-left: 77px solid #009ce1;
+      content: "";
+      height: 0;
+      position: absolute;
+        right: -77px;
+        top: 0;
+      width: 0;
+    }
+  }
+  &.orange {
+    background: #de361c;
+    &:after {
+      border-top: 69px solid transparent;
+      border-bottom: 69px solid transparent;
+      border-right: 77px solid #de361c;
+      content: "";
+      height: 0;
+      position: absolute;
+        left: -77px;
+        top: 0;
+      width: 0;
+    }
+ }
+}
+
+.blue-title {
+  background: #009ce1;
+}
+
+.stylist {
+  color: #fff;
+  font-size: 2.1rem;
+}
+
+.stylist:after {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 0.5rem 1rem 0.5rem 0;
+}
+
+.content {
+  -webkit-column-count:2; /* Chrome, Safari, Opera */
+  -moz-column-count:2; /* Firefox */
+  column-count:2;
+  -webkit-column-gap:40px; /* Chrome, Safari, Opera */
+  -moz-column-gap:40px; /* Firefox */
+  column-gap:40px;
+  padding: 1.5rem 0 0 2.5rem;
+}
+
+.reverse-content {
+  padding: 1.5rem 2.5rem 0 0;
+}
+
+.thin {
+  color: #fff;
+  font-weight: 400;
+}
+
+.blue-bullet:before, .yellow-bullet:before {
+  content: "\2022";
+  display: inline-block;
+  margin: 0 2px 0 0;
+}
+
+.blue-bullet:before {
+  color: #009ce1;
+}
+
+.yellow-bullet:before {
+  color: #f4ed00;
+}
+
+.body-line-height {
+  line-height: 1.2rem;
+}
+
+.heading-line-height {
+  line-height: 2.5rem;
+}
+
+.left-triangle, .right-triangle {
+  font-family: Arial;
+}
+
+.left-triangle:before {
+  color: #7b786a;
+  content: "\25C4";
+  left: 0;
+  position: absolute;
+}
+
+.right-triangle:before {
+  color: #7b786a;
+  content: "\25BA";
+  left: 0;
+  position: absolute;
+}
+
+.reverse-aside {
+  margin: 1rem 0 0 0;
+  padding: 0 2.5rem 0 0;
+}
+
+.break {
+  display: block;
+}
+
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
