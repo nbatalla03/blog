@@ -274,12 +274,6 @@ footer {
   display: block;
 }
 
-.separator:after {
-  content: "hi";
-  display: block;
-  border-bottom: 1px dotted #000;
-}
-
 /* Clearfix */
 .cf:before,
 .cf:after {
