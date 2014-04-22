@@ -1,0 +1,41 @@
+---
+title: Hodgepodge
+date: 2014-04-22 21:00 UTC
+category: General
+layout: articles-layout
+---
+
+<p>This week I refocused my efforts on apprenticeship projects and recently completed a project where I had to recreate a magazine article using semantic HTML and CSS. You can view the completed project <a href="http://nelsolbatalla.com/news-article-project">here</a>, and the original magazine article <a href="http://i.imgur.com/9L2ssY0.jpg">here</a>.</p>
+
+<p>Throughout the life of the project, I took notes of things I wanted to share in this blog post. Due to the randomness of my notes, I felt it was fitting to title this blog post Hodgepodge.</p>
+
+<h4>Pseudo Elements</h4>
+
+<p>For this particular project, I've made use of pseudo elements in areas I normally wouldn't use them. The heavy use of pseudo elements throughout this project came about when I was debating on what approach I wanted to take with the triangles (referenced below).</p>
+
+<p>When I finally settled on using pseudo elements for the triangles, it spilled over into other parts such as the bullets, left and right isosceles triangles, and even the border separators.</p>
+
+<p>What I found was cleaner markup using pseudo elements, this is a welcomed positive, since I'm still tweaking how I approach OOCSS and dealing with the more bloated markup. Take for example the following code for a border:</p>
+
+<script src="https://gist.github.com/nbatalla03/11191627.js"></script>
+
+
+<p>You'll notice that we have to repeat the separator class every time we want a separator, by using pseudo elements you remove that redundancy.</p>
+
+<p>I haven't researched pseudo elements deep enough yet to counter with potential issues. I'll report back when I get more experience with pseudo elements in more diverse situations.</p>
+
+<h4>Time Contraint</h4>
+
+<p>Before starting any project I usually make an estimation on how long I think it will take to complete, this extensive process typically involves reading the alignment of the stars in order to get an accurate estimate. My mentor threw a curveball this time around and set the estimation for me, on a positive note I didn't have to read the alignment of the stars, on the other hand I couldn't buy myself time.</p>
+
+<p>Stephanie knows full well that I struggle to edit down my ideas. Luckily, I noticed her intentions and made the necessary changes to account for the strict deadline. For those wondering, she gave me three days to complete this project.</p>
+
+<p>I realized straight away that the biggest stumbling block would be the article selection. Again, I had to battle my tendency to go big and pick something that would be feasible to be completed in the allotted amount of time, while being challenged.</p>
+
+<p>Throughout the project, I kept a short feedback loop with my mentor to simulate communication with a client making sure expectations were being met. The project's progress was going so well Stephanie threw in another curveball. I had mentioned that I did not like how the spacing of the content looked in the article and wanted to improve upon it. She suggested I make another version exhibiting the changes I would have made. I was tempted to bite the hook, but I opted instead to tell her if I had time it would be something I could tackle.</p>
+
+<p>By resisting the urge to saying yes! I saved myself from potentially missing the deadline, since adding a second version would have been expected instead of just having the one version of the project.</p>
+
+<h4>Arial</h4>
+
+<p>Really quickly, I wanted to write about this annoying problem I was having using the HTML code for a <a href="http://www.fileformat.info/info/unicode/char/25B6/index.htm">triangle pointing right</a> and a <a href="http://www.fileformat.info/info/unicode/char/25c0/index.htm">triangle pointing left</a>. The issue I was running into was different triangles. Even though these HTML triangle codes were the counter to each other the left pointing triangle was more equilateral than the right pointing one. Embarrassingly, I spent an hour before I finally figured it out, and the solution was to apply Arial to it's font-family.</p>
