@@ -92,6 +92,26 @@ strong {
         margin-left: 0;
       }
 
+.portfolio-button {
+  background: #ed531b !important;
+  border: none !important;
+  border-radius: 5px !important;
+  -moz-box-shadow:    0 4px 0 0 #ca3501 !important;
+  -webkit-box-shadow: 0 4px 0 0 #ca3501 !important;
+  box-shadow:         0 4px 0 0 #ca3501 !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  display: block;
+  font: 700 1.5rem "proxima-nova" !important;
+  margin: 1rem 0 0 0;
+  padding: 1rem 0 !important;
+  text-align: center;
+  width: 100% !important;
+  &:hover {
+    background: #f5551e !important;
+  }
+}
+
 .main {
   float: right;
   padding: 5% 5%;
