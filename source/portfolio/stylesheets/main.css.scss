@@ -221,7 +221,11 @@ aside {
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 401px) {
+  aside, .project-list {
+    padding: 1.6rem 1rem;
+  }
+
   .small-fonts {
     font-size: 0.8rem;
   }
