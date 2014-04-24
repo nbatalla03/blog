@@ -123,20 +123,20 @@ aside {
   color: #ff3030;
 }
 
-.button {
-  background: #ed531b;
-  border: none;
-  border-radius: 5px;
-  -moz-box-shadow:    0 4px 0 0 #ca3501;
-  -webkit-box-shadow: 0 4px 0 0 #ca3501;
-  box-shadow:         0 4px 0 0 #ca3501;
-  color: #fff;
-  cursor: pointer;
-  font: 700 1.5rem "proxima-nova";
-  padding: 1rem 0;
-  width: 100%;
+.button, .ui-btn {
+  background: #ed531b !important;
+  border: none !important;
+  border-radius: 5px !important;
+  -moz-box-shadow:    0 4px 0 0 #ca3501 !important;
+  -webkit-box-shadow: 0 4px 0 0 #ca3501 !important;
+  box-shadow:         0 4px 0 0 #ca3501 !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  font: 700 1.5rem "proxima-nova" !important;
+  padding: 1rem 0 !important;
+  width: 100% !important;
   &:hover {
-    background: #f5551e;
+    background: #f5551e !important;
   }
 }
 
