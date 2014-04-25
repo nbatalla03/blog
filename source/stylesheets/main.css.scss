@@ -96,22 +96,22 @@ strong {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background: #ed531b !important;
-  border: none !important;
-  border-radius: 5px !important;
-  -moz-box-shadow:    0 4px 0 0 #ca3501 !important;
-  -webkit-box-shadow: 0 4px 0 0 #ca3501 !important;
-  box-shadow:         0 4px 0 0 #ca3501 !important;
-  color: #fff !important;
-  cursor: pointer !important;
+  background: #ed531b;
+  border: none;
+  border-radius: 5px;
+  -moz-box-shadow:    0 4px 0 0 #ca3501;
+  -webkit-box-shadow: 0 4px 0 0 #ca3501;
+  box-shadow:         0 4px 0 0 #ca3501;
+  color: #fff;
+  cursor: pointer;
   display: block;
-  font: 700 1.5rem "futura-pt" !important;
+  font: 700 1.5rem "futura-pt";
   margin: 1rem 0 0 0;
-  padding: 1rem 0 !important;
+  padding: 1rem 0;
   text-align: center;
-  width: 100% !important;
+  width: 100%;
   &:hover {
-    background: #f5551e !important;
+    background: #f5551e;
   }
 }
 
