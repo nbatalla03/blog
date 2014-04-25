@@ -108,9 +108,12 @@ aside {
     -moz-box-shadow:    0 1px 4px 0 rgba(0,0,0,0.2);
     -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
     box-shadow:         0 1px 4px 0 rgba(0,0,0,0.2);
-    // display: table;
-    margin: 1rem 0 0 0;
+    margin: 1.6rem 0 0 0;
+    overflow: hidden;
     width: 100%;
+    &:first-child {
+      margin: 0 0 0 0;
+    }
   }
 }
 
@@ -124,19 +127,19 @@ aside {
 }
 
 .button {
-  background: #ed531b !important;
-  border: none !important;
-  border-radius: 5px !important;
-  -moz-box-shadow:    0 4px 0 0 #ca3501 !important;
-  -webkit-box-shadow: 0 4px 0 0 #ca3501 !important;
-  box-shadow:         0 4px 0 0 #ca3501 !important;
-  color: #fff !important;
-  cursor: pointer !important;
-  font: 700 1.5rem "proxima-nova" !important;
-  padding: 1rem 0 !important;
-  width: 100% !important;
+  background: #ed531b;
+  border: none;
+  border-radius: 5px;
+  -moz-box-shadow:    0 4px 0 0 #ca3501;
+  -webkit-box-shadow: 0 4px 0 0 #ca3501;
+  box-shadow:         0 4px 0 0 #ca3501;
+  color: #fff;
+  cursor: pointer;
+  font: 700 1.5rem "proxima-nova";
+  padding: 1rem 0;
+  width: 100%;
   &:hover {
-    background: #f5551e !important;
+    background: #f5551e;
   }
 }
 
