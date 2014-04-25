@@ -93,6 +93,9 @@ strong {
       }
 
 .portfolio-button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
   background: #ed531b !important;
   border: none !important;
   border-radius: 5px !important;
