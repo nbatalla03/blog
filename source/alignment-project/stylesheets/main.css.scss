@@ -85,11 +85,12 @@ section {
 }
 
 #guide {
-  background: url('../images/target-button.jpg') no-repeat;
-  height: 29px;
+  color: #00a2ff;
+  cursor: pointer;
+  font-size: 2rem;
   position: fixed;
-    right: 0;
-  width: 29px;
+    right: 10px;
+    top: 10px;
 }
 
 .column {
