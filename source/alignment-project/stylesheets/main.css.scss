@@ -85,12 +85,15 @@ section {
 }
 
 #guide {
-  color: #00a2ff;
+  color: #9dd45c;
   cursor: pointer;
   font-size: 2rem;
   position: fixed;
     right: 10px;
     top: 10px;
+  &:hover {
+    color: #ffeb64 !important;
+  }
 }
 
 .column {

@@ -8,7 +8,7 @@ $(function() {
       $('#guide').css('color', '#ff1b3b');
       showOrHide = false;
     } else {
-      $('#guide').css('color', '#00a2ff');
+      $('#guide').css('color', '#9dd45c');
       showOrHide = true;
     }
   });
