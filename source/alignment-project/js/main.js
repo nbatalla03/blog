@@ -1,10 +1,10 @@
 $(function() {
   var showOrHide = true;
 
-  $('.show').on('click', function() {
+  $('[data-id-circle-animation]').on('click', function() {
     $('.overlay').toggle('slow');
 
-    if (showOrHide) { 
+    if (showOrHide) {
       $('#guide').css('color', '#ff1b3b');
       showOrHide = false;
     } else {
@@ -14,3 +14,9 @@ $(function() {
   });
 });
 
+
+window.Alignment = {
+  showGradients: function() {
+    $('[data-id=overlay]').toggle('slow');
+  }
+};
