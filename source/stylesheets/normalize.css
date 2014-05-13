@@ -46,3 +46,15 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/* Github Gist Override */
+.gist-file{
+ border-bottom: none !important;
+ margin-top: 2.074em;
+ margin-bottom: 2.074em !important;
+}
+.gist-meta {
+ display: none;
+ padding: 0;
+}
+

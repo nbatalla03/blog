@@ -17,7 +17,7 @@ body {
 
 h1 {
   font-family: "open-sans";
-  font-size: 2rem;
+  font-size: 3.5rem;
   font-weight: 700;
 }
 
@@ -32,7 +32,15 @@ a {
 }
 
 a:hover {
-  text-shadow: 0 0 50px rgba(0,0,0, 0.7);
+  text-decoration: underline;
+}
+
+code {
+  font-size: 0.8rem;
+}
+
+pre {
+  color: #708da4;
 }
 
 /* Layout */
@@ -58,6 +66,10 @@ a:hover {
   width: 49%;
 }
 
+.full {
+  width: 100%;
+}
+
 .welcome {
   background: #fff;
   padding: 3rem 0 4rem;
@@ -69,21 +81,26 @@ a:hover {
 }
 
 .important {
-  margin-top: 2rem;
-  padding: 0 10rem;
+  border: 5px solid #ddd;
+  margin: 2rem 5rem 0;
+  padding: 2rem 2rem;
   text-align: left;
   a {
-    color: inherit;
+    color: #00B256;
     &:hover {
       text-shadow: none;
     }
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
+    margin: 1.5rem 0 0 0;
+    &:first-child {
+      margin: 0;
+    }
   }
   p {
-    color: #888;
+    color: #555;
     margin-top: 1rem;
   }
   .one-half {
@@ -116,23 +133,39 @@ a:hover {
   h2 {
     color: #fff;
     font-weight: 700;
+    font-size: 2.5rem;
+  }
+  h3 {
+    color: #fff;
+    font-weight: 700;
     font-size: 1.5rem;
-    margin-bottom: 1rem;
   }
   p {
     color: #798a95;
-    margin-top: 0;
+    margin-top: 1rem;
   }
   li {
-    margin-top: 4rem;
+    padding-top: 4rem;
+    position: relative;
     &:after {
-      border-bottom: 1px solid #20262b;
+      border-bottom: 1px solid #2c343a;
       padding: 4rem 0 0 0;
       width: 100%;
     }
   }
   .one-half {
     padding: 0 4rem;
+  }
+}
+
+.heading {
+  background: #2a3238;
+  padding: 2rem 0;
+}
+
+.code-example {
+  p:first-child {
+    margin: 0;
   }
 }
 
@@ -144,8 +177,12 @@ a:hover {
 }
 
 .welcome-message {
-  font-size: 2rem;
   font-weight: 200;
+  margin: 2rem 0 0 0;
+  p {
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
 }
 
 .red {
@@ -163,6 +200,29 @@ a:hover {
   text-transform: uppercase;
 }
 
+.marker {
+  background: #2c343a;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem 3rem;
+  position: absolute;
+    left: 4rem;
+    top: 0;
+  text-transform: uppercase;
+}
+
+.no-margins p {
+  margin: 0;
+}
+
+.gist-file {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+
+
 /* Clearfix */
 .cf:before,
 .cf:after {
@@ -176,17 +236,29 @@ a:hover {
 
 /* Media Queries */
 @media only screen and (max-width: 900px) {
-  .important {
-    padding: 0;
-  }
-
   .one-half {
-    margin: 1rem 0 0 0;
+    margin: 0;
     width: 100%;
   }
 
   .fallback-list .one-half {
     padding: 0 1.5rem;
+  }
+
+  .heading {
+    padding: 2rem 1.5rem;
+  }
+
+  .marker {
+    left: 1.5rem;
+  }
+
+  .important {
+    margin: 2rem 0 0;
+  }
+
+  .code-example  {
+    margin: 1rem 0 0 0;
   }
 }
 

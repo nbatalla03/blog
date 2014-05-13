@@ -8,7 +8,7 @@ layout: projects-layout
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fallback Project</title>
+    <title>Setup & Fallback Project</title>
     <%= stylesheet_link_tag 'normalize' %>
     <link href="./stylesheets/main.css" media="screen" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="//use.typekit.net/lqb2ptd.js"></script>
@@ -20,39 +20,52 @@ layout: projects-layout
       <div class="container">
         <section>
           <img src="images/brand-logo.png">
-          <p class="welcome-message">Hi! Welcome to my <strong>Fallback Project</strong>. I'll cover how I typically setup new projects in conjunction with <a href="http://modernizr.com/">Modernizr</a> to ensure older browsers get some  love <span class="red">&hearts;</span>.</p>
+          <div class="welcome-message">
+            <h1>Setup & Fallback Project</h1>
+            <p>How I setup my projects with HTML5 and CSS3 fallbacks using Modernizr.</p>
+          </div>
         </section>
 
-        <div class="row important cf">
-          <a href="http://meyerweb.com/eric/tools/css/reset/reset200802.css" target="_blank" class="one-half column">
-            <h2>CSS Reset</h2>
-            <p>Almost always, I will use a CSS reset at the start of a project. The CSS reset I use is quite aggressive, you can opt to use a normalize instead.</p>
-          </a>
-
-          <a href="http://modernizr.com/download/" target="_blank" class="one-half column">
-            <h2>Modernizr</h2>
-            <p>Mordernizr is a great way to detect what HTML5 and CSS3 features a users browser supports and provide a fallback if necessary.</p>
-          </a>
-        </div>
+<!--         <div class="row important cf"> -->
+<!--           <h2>The Setup</h2> -->
+<!--           <p>My project setup consists of three folders &#45; js, stylesheets, and images. Within the root folder I'll have a single index.html file, extension changes based on the project. You can view my index file here accompanied with comments.</p> -->
+<!--  -->
+<!--           <h2>CSS Reset</h2> -->
+<!--           <p>I like to use a CSS reset for all my projects, my go to CSS reset is from Eric Meyer, you can grab that <a href="http://meyerweb.com/eric/tools/css/reset/reset200802.css">here</a>. If a CSS reset is too aggressive for your tastes, you can opt for a CSS normalize instead. HTML5&#45;Boilerplate has a good CSS normalize, you can grab that <a href="https://github.com/h5bp/html5&#45;boilerplate/blob/master/css/normalize.css">here</a>. -->
+<!--  -->
+<!--           <h2>Modernizr</h2> -->
+<!--           <p>We'll be using <a href="http://modernizr.com/">Modernizr</a> to detect which HTML5 and CSS3 technologies a users browser can support. To get a quick primer on how Modernizr works, read this <a href="http://alistapart.com/article/taking&#45;advantage&#45;of&#45;html5&#45;and&#45;css3&#45;with&#45;modernizr">article</a>. It's recommended that you only select the features you need from the <a href="http://modernizr.com/download/">Modernizr build page</a> to keep code bloat low.</p> -->
+<!--         </div> -->
       </div>
     </div>
 
     <div class="row">
       <ul class="fallback-list cf">
+        <!-- <section class="heading cf"> -->
+        <!--   <div class="one&#45;half column"> -->
+        <!--     <h2>The Setup</h2> -->
+        <!--   </div> -->
+        <!-- </section> -->
+
         <li class="cf">
+          <div class="marker">The Setup</div>
+
           <section>
             <div class="one-half column">
-              <h2>@font-face</h2>
-              <p>Hello, world!</p>
-              <p><span class="tag">CSS3</span></p>
+              <h3>Folder & File Structure</h3>
+              <p>For a basic project, I use a basic setup. The root directory will contain a <strong>js</strong>, <strong>image</strong>, and <strong>stylesheets</strong> folder. Within the root folder I'll start off with a single <strong>index.html</strong> file, I'll add important project pages in the root as the project progresses.</p>
             </div>
 
-            <div class="one-half column">
-              <p>
-                In the header.php template file,
-                look for the <code>&lt;div class="header"&gt;</code>
-                section to change the <code>&lt;h1&gt;</code> heading.
-              </p>
+            <div class="one-half column code-example no-margins">
+              <p><strong>root</strong></p>
+              <p>|__<strong>images</strong></p>
+              <p>|__<strong>js</strong></p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__main.js</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__modernizr-2.8.0.min.js</p>
+              <p>|__<strong>stylesheets</strong></p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__main.css</p>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__reset.css</p>
+              <p>|__index.html</p>
             </div>
           </section>
         </li>
@@ -60,12 +73,111 @@ layout: projects-layout
         <li class="cf">
           <section>
             <div class="one-half column">
-              <h2>border-radius</h2>
+              <h3>index.html</h3>
+              <p>Nothing fancy here, my index.html setup is pretty standard. A few things to point out, <strong>line 2</strong> has a no-js class on the html tag, this is used by Modernizr (more on this later). <strong>Line 8</strong> has a viewport meta tag to deal with responsive design. <strong>Line 11</strong> links to your Modernizr js file. <strong>Line 15</strong> links to a jQuery CDN, <strong>line 16</strong> links to a local jQuery js file incase the CDN can't be reached.</p>
+            </div>
+
+            <div class="one-half column code-example">
+              <script src="https://gist.github.com/nbatalla03/dfdae0a4e13d3036c314.js"></script>
+            </div>
+          </section>
+        </li>
+
+        <li class="cf">
+          <section>
+            <div class="one-half column">
+              <h3>reset.css</h3>
+              <p>A CSS reset resets default styling across all browsers, I liken it to working on a fresh canvas. Depending on how you like to work, a CSS reset might be a bit too aggressive, in which case you can opt for a CSS normalize.</p>
+            </div>
+
+            <div class="one-half column code-example">
+              <p><strong>My Favorite CSS Reset:</strong></p>
+              <span class="small-break"><a href="http://meyerweb.com/eric/tools/css/reset/reset200802.css">Eric Meyer's CSS</a></span>
+              <p><strong>CSS Normalize:</strong></p>
+              <span class="small-break"><a href="https://github.com/h5bp/html5-boilerplate/blob/master/css/normalize.css#">HTML5 Boilerplate CSS Normalize</a></span>
+            </div>
+          </section>
+        </li>
+
+        <li class="cf">
+          <section>
+            <div class="one-half column">
+              <h3>main.css</h3>
+              <p>I like to use as little code as possible, so my main.css starts pretty bare. I'll apply <strong>box-sizing</strong> globally, default my html element to open-sans font and accompany it with <strong>font-smoothing</strong>. I implement some aspects of OOCSS methodologies so I'll start with resuable chunks of code for <strong>row</strong>, <strong>column</strong>, and <strong>container</strong>.</p>
+            </div>
+
+            <div class="one-half column code-example">
+              <script src="https://gist.github.com/nbatalla03/2e58ced68ab810d0bed7.js"></script>
+            </div>
+          </section>
+        </li>
+
+        <li class="cf">
+          <section>
+            <div class="one-half column">
+              <h3>main.js</h3>
+              <p>I only have three lines of code in my main.js file at the start of a new project. I place an alert function with the message <strong>"I'm working! You can delete me!"</strong>, this is a crude way of notifying myself that my javascript files are linked correctly, this has saved me numerous headaches in the past wondering why none of my javascript code is working.</p>
+            </div>
+
+            <div class="one-half column code-example no-margins">
+              <p><strong>The Code:</strong></p>
+              <p>$( document ).ready(function() {</p>
+              <p>&nbsp;&nbsp;alert('I'm working! You can delete me!');</p>
+              <p>});</p>
+            </div>
+          </section>
+        </li>
+
+        <li class="cf">
+          <section>
+            <div class="one-half column">
+              <h3>modernizr-2.8.0.min.js</h3>
+              <p>Mordernizr is a javascript library that detects the availablity of the latest HTML5 and CSS3 web technologies. To get a quick primer on Modernizr, I recommend reading <a href="http://alistapart.com/article/taking-advantage-of-html5-and-css3-with-modernizr">this</a> article from A List Apart. Keep in mind that Modernizr detects which HTML5 and CSS3 technologies are available, you still have to provide the <strong>fallbacks</strong> yourself.</p>
+            </div>
+
+            <div class="one-half column code-example">
+              <p><strong>Get Modernizr:</strong></p>
+              <span class="small-break"><a href="http://modernizr.com/download/">http://modernizr.com/download/</a></span>
+              <p>It's recommended to only select HTML5 and CSS3 technologies you are going to use to keep code bloat down.</p>
+            </div>
+          </section>
+        </li>
+
+<!--         <section class="heading cf"> -->
+<!--           <div class="one&#45;half column"> -->
+<!--             <h2>Fallbacks</h2> -->
+<!--           </div> -->
+<!--  -->
+<!--           <div class="one&#45;half column"> -->
+<!--  -->
+<!--           </div> -->
+<!--         </section> -->
+
+        <li class="cf">
+          <div class="marker">Fallbacks</div>
+
+          <section>
+            <div class="one-half column">
+              <h3>border-radius</h3>
               <p>What is border radius.</p>
               <p><span class="tag">CSS3</span></p>
             </div>
 
+            <div class="one-half column code-example">
+              <p>More Explanation</p>
+            </div>
+          </section>
+        </li>
+
+        <li class="cf">
+          <section>
             <div class="one-half column">
+              <h3>box-border</h3>
+              <p>What is box border.</p>
+              <p><span class="tag">CSS3</span></p>
+            </div>
+
+            <div class="one-half column code-example">
               <p>More Explanation</p>
             </div>
           </section>
