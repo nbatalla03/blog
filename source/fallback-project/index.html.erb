@@ -124,9 +124,8 @@ layout: projects-layout
             </div>
 
             <div class="one-half column code-example">
-              <p><strong>Get Modernizr:</strong></p>
-              <span class="small-break"><a href="http://modernizr.com/download/">http://modernizr.com/download/</a></span>
-              <p>It's recommended to only select HTML5 and CSS3 technologies you are going to use to keep code bloat down.</p>
+              <p><strong>Modernizr Docs:</strong></p>
+              <span class="small-break"><a href="http://modernizr.com/docs/">http://modernizr.com/docs/</a></span>
             </div>
           </section>
         </li>
@@ -136,8 +135,8 @@ layout: projects-layout
 
           <section>
             <div class="one-half column">
-              <h3>fallbacks, polyfills, shiv?</h3>
-              <p>I want to clear some terminology before moving forward. I've been using fallbacks as a catch all term. Although each aims to provide support to certain HTML5 and CSS3 technologies, the level of support as well as the way they are implemented varies.</p>
+              <h3>terminology</h3>
+              <p>I want to clear some terminology before moving forward. I've been using fallback as a catch all term. Although each aims to provide support to certain HTML5 and CSS3 technologies, the level of support as well as the way they are implemented varies.</p>
             </div>
 
             <div class="one-half column code-example">
@@ -156,15 +155,39 @@ layout: projects-layout
         <li class="cf">
           <section>
             <div class="one-half column">
-              <h3>moving forward</h3>
-              <p>If you haven't already done so, I recommend reading A List Apart's article on Modernizr, you can view that <a href="http://alistapart.com/article/taking-advantage-of-html5-and-css3-with-modernizr">here</a>. Once you have a good handle on how Modernizr works, head on over to <a href="http://html5please.com/">HTML5 Please</a>, they've cataloged the common HTML5 and CSS3 technologies that require support and the best way to go about providing that support either via fallbacks or polyfills.</p>
+              <h3>setup modernizr</h3>
+              <p>In order to detect which HTML5 or CSS3 technologies we need to provide a fallback for, we need a javascript library like Modernizr to do so. Fortunately, setup is as easy as downloading modernizr.js and placing it on your project's js folder.</p>
+              <p>Every project is different, so I recommend you only select the technologies that you will be using instead of selecting everything. With that said, Modernizr auto selects HTML5 shiv, I recommend you keep that.</p>
             </div>
 
             <div class="one-half column code-example">
-              <p><strong>Resources</strong>:</p>
+              <p><strong>Get Modernizr:</strong></p>
+              <span class="small-break"><a href="http://modernizr.com/download/">http://modernizr.com/download/</a></span>
+
+              <p><strong>Place In Header:</strong></p>
+              <span class="small-break">&lt;script src="js/modernizr-2.8.0.min.js"&gt;&lt;/script&gt;</span>
+              <span class="small-break small-text">* Your version number may differ.</span>
+            </div>
+          </section>
+        </li>
+
+        <li class="cf">
+          <section>
+            <div class="one-half column">
+              <h3>next steps</h3>
+              <p>If you haven't already done so, I recommend reading A List Apart's article on Modernizr, you can view that <a href="http://alistapart.com/article/taking-advantage-of-html5-and-css3-with-modernizr">here</a>.</p>
+              <p>Since you'll need to provide the fallbacks yourself, a great resource to look at is <a href="http://html5please.com/">HTML5 Please</a>. It documents the common HTML5 and CSS3 technologies that may require fallbacks, they also recommend the best ways to implement support either via fallbacks or pollyfils.</p>
+            </div>
+
+            <div class="one-half column code-example">
+              <p><strong>Fallback Resources</strong>:</p>
+              <span class="small-break"><a href="http://html5please.com/">HTML5 Please</a></span>
+
+              <p><strong>Recommended Reading:</strong></p>
               <span class="small-break"><a href="http://alistapart.com/article/taking-advantage-of-html5-and-css3-with-modernizr">A List Apart</a></span>
               <span class="small-break"><a href="http://modernizr.com/docs/">Modernizr Docs</a></span>
-              <span class="small-break"><a href="http://html5please.com/">HTML5 Please</a></span>
+              <span class="small-break"><a href="http://remysharp.com/2010/10/08/what-is-a-polyfill/">What is a Polyfill?</a></span>
+              <span class="small-break"><a href="http://nicolasgallagher.com/yet-another-html5-fallback-strategy-for-ie/">Alternative Fallback Strategy for HTML5</a></span>
             </div>
           </section>
         </li>
